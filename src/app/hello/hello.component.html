@@ -1,0 +1,7 @@
+<p>hello works!</p>
+<h1>{{user.name}}</h1>
+<h1>{{user.age}}</h1>
+<h1>{{permission}}</h1>
+<input [type]="inputType" [value]="user.name" (change)="handleChange($event)">
+<input type="text" [ngModel] = "permission" (ngModelChange)="handleChangePermission($event)">
+<button (click)="handleClick()">click me</button>

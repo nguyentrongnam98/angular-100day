@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-hello',
@@ -6,20 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./hello.component.css']
 })
 export class HelloComponent {
-  user = {
-    name:'Sam Nguyen',
-    age: 25
+  @Input() user? : {name:string, age:number}
+  ngOnInit() {
+    console.log('INIT COMPONENT');
   }
-   permission = 'admin'
-   inputType = 'text'
-   handleClick() {
-    alert('say hello')
-   }
-   handleChange(e:Event) {
-     console.log((e.target as HTMLInputElement).value)
-   }
-   handleChangePermission(e:string) {
-    console.log(e)
-    this.permission = e;
-   }
+  ngOnDestroy() {
+    console.log('DESTROY COMPONENT');
+  }
 }

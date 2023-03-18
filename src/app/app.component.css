@@ -1,0 +1,23 @@
+.isFirst {
+  color: red;
+}
+.isLast {
+  color: blue;
+}
+.isOdd {
+  color: aqua;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  border: 1px solid black;
+}
+
+.isDanger {
+  border: 1px solid red;
+}
+
+.isWarning {
+  background-color: yellow;
+}

@@ -1,34 +1,11 @@
-<div>
-  <ng-template [ngIf]="user.age >= 25" [ngIfElse]="under25">
-    <app-hello [user]="user"></app-hello>
-  </ng-template>
-  <ng-template #under25>
-    <p>you are to young to see this content</p>
-  </ng-template>
-  <button (click)="user.age = user.age + 1">Tang</button>
-  <button (click)="user.age = user.age - 1">Giam</button>
-  <p
-    *ngFor="
-      let user of listUser;
-      index as i;
-      count as isCount;
-      first as isFirst;
-      last as isLast;
-      odd as isOdd;
-      even as isEven
-    "
-    [class.isFirst]="isFirst"
-    [class.isLast]="isLast"
-    [class.isOdd]="isOdd"
-  >
-    {{ user.name }} --- {{ i }} --- {{ isCount }}
-    {{ isEven }}
-  </p>
-  <div
-    class="box"
-    [style.border-color]="isDanger ? 'red' : 'black'"
-    [style.background-color]="isWarning ? 'yellow' : 'white'"
-  ></div>
-  <button (click)="isDanger = !isDanger">Danger</button>
-  <button (click)="isWarning = !isWarning">Warning</button>
-</div>
+<!-- <app-progress-bar></app-progress-bar> -->
+<app-progress-bar
+  [backgroundColor]="backgroundColor"
+  [styles]="styles"
+  [person]="person"
+></app-progress-bar>
+<button (click)="incrementProgress()">Increment</button>
+
+<app-author-detail [listAuthor] = "listAuthor" (selectAuthor)="onSelectedAuthor($event)" (deleteAuthor)="onDeletedAuthor($event)"></app-author-detail>
+
+<h4>Curent author : {{curentAuthor?.name}}</h4>

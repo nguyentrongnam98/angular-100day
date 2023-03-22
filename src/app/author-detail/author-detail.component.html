@@ -1,0 +1,7 @@
+<p>author-detail works!</p>
+<p *ngFor="let author of listAuthor">
+  {{ author.name }}
+  <button style="margin-left: 10px" (click)="selectAuthor.emit(author)">
+    Select</button
+  ><button (click)="deleteAuthor.emit(author.id)">Delete</button>
+</p>

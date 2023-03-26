@@ -9,3 +9,13 @@
 <app-author-detail [listAuthor] = "listAuthor" (selectAuthor)="onSelectedAuthor($event)" (deleteAuthor)="onDeletedAuthor($event)"></app-author-detail>
 
 <h4>Curent author : {{curentAuthor?.name}}</h4>
+<app-hello [name]="name"></app-hello>
+
+<input type="text" [ngModel]="name" (ngModelChange)="name = $event">
+
+
+<app-toogle #aa [checked]="isCheck"></app-toogle>
+
+<button (click)="toggle()">Button</button>
+
+

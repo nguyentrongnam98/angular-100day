@@ -20,9 +20,9 @@ export class ProgressBarComponent implements OnInit , OnChanges {
  }
  @Input() person : {name:string,age:string} = {name:'',age:''};
  ngOnInit(): void {
-   console.log('init',this.styles)
+
  }
  ngOnChanges(changes: SimpleChanges): void {
-   console.log('change',this.styles,changes)
+  
  }
 }

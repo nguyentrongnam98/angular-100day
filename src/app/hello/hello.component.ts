@@ -6,7 +6,7 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./hello.component.css']
 })
 export class HelloComponent {
-  @Input() user? : {name:string, age:number}
+  @Input() name : string = '';
   ngOnInit() {
     console.log('INIT COMPONENT');
   }

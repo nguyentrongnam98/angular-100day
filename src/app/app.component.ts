@@ -11,7 +11,8 @@ export class AppComponent {
   // @ViewChildren(ToggleComponent) toggleComponent ?: QueryList<ToggleComponent>;
   // @ViewChild('button', {static:true}) button?: ElementRef<HTMLButtonElement>;
   public title = 'angular-100days';
-  name = "angular"
+  name = "angular";
+  age = 18;
   progress: number = 50;
   progressColor: string = 'tomato';
   backgroundColor: string = '#ccc';

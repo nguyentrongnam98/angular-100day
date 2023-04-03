@@ -7,7 +7,7 @@ import { Author } from '../author.model';
   styleUrls: ['./author-detail.component.css']
 })
 export class AuthorDetailComponent {
- @Input() listAuthor?: Author[] = [];
- @Output() selectAuthor = new EventEmitter<Author>()
- @Output() deleteAuthor = new EventEmitter<number>()
+//  @Input() listAuthor?: Author[] = [];
+//  @Output() selectAuthor = new EventEmitter<Author>()
+//  @Output() deleteAuthor = new EventEmitter<number>()
 }

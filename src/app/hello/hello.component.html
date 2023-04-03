@@ -1,2 +1,7 @@
 <h1>{{name}}</h1>
 <h1>{{notification}}</h1>
+<div *ngFor = "let author of authors">
+  <p [style]="{color:curentAuthor ? 'red' :'black'}">{{author.firstName}}</p>
+  <button (click)="handleSelectAuthor(author.id)">select</button>
+  <button (click)="handleDeleteAuthor(author.id)">delete</button>
+</div>
